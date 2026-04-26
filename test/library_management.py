@@ -11,3 +11,11 @@ class LibraryItem(ABC):
 
     def __str__(self):
         return f"{self.title} by {self.creator} ({self.year})"
+
+    def to_dict(self) -> dict:
+        return {
+                "title": self.title,
+                "creator": self.creator,
+                "year": self.year,
+                "type": self.__class__.__name__
+             }
