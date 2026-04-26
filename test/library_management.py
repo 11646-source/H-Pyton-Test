@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 from abc import ABC
-
+import json
 
 class LibraryItem(ABC):
     def __init__(self, title, creator, year):
@@ -19,3 +19,9 @@ class LibraryItem(ABC):
                 "year": self.year,
                 "type": self.__class__.__name__
              }
+
+def save_item_data(item: LibraryItem) -> None:
+    filename = f"{item.title}_{item.creator}.json"
+
+    with open(filename, "w", encoding="utf-8") as file:
+        json.dump(item.to_dict(), file)
