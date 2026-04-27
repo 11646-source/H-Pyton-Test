@@ -27,7 +27,7 @@ class Teacher(Person):
         return "{} ({}) - Subject: {} - Salary: {}".format(
                 self.name,
                 self.age,
-                self.subject
+                self.subject,
                 self.salary
             )
 
