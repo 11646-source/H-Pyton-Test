@@ -24,10 +24,10 @@ class Teacher(Person):
         self.salary = salary
 
     def __str__(self):
-        return "{} ({}) - ID: {} - Salary: {}".format(
+        return "{} ({}) - Subject: {} - Salary: {}".format(
                 self.name,
                 self.age,
                 self.subject
-                ",".join(self.salary)
+                self.salary
             )
 
