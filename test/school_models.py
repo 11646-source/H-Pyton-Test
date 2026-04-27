@@ -16,3 +16,18 @@ class Student(Person):
             self.student_id,
             ", ".join(self.course_list)
         )
+
+class Teacher(Person):
+    def __init__(self, name, age, subject, salary):
+        super().__init__(name, age)
+        self.subject = subject
+        self.salary = salary
+
+    def __str__(self):
+        return "{} ({}) - ID: {} - Salary: {}".format(
+                self.name,
+                self.age,
+                self.subject
+                ",".join(self.salary)
+            )
+
