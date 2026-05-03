@@ -16,7 +16,7 @@ class Person(ABC):
                 "name": self.name
                 "age": self.age
                 "type": self.__class__.__name__
-                }
+            }
         def save_item_data(item: Person) -> None:
             filename = f"{item.name}_{item.age}.json"
 
