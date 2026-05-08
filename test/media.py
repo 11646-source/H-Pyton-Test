@@ -25,4 +25,13 @@ class MediaItem:
         self.artist = artist
 
     def info(self) -> str:
-        return f"Song: {self.title} by {self.artist} [{self.format_duration()}]"
+        return f"song: {self.title} by {selt.arstist} [{self.formation_duration()}]"
+
+class Podcast(MediaItem):
+    def __init__(self, title: str, duration: int, host: str, episode: int):
+        super().__init__(title, duration)
+        self.host = host
+        self.episode = episode
+
+    def info(self) -> str:
+        return f"podcast: {self.title} ep {episode} by {host} [{duration}}"
