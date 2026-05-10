@@ -2,7 +2,7 @@
 
 
 class MediaItem:
-    def __init__(self, title: duration: int):
+    def __init__(self, title: str,  duration: int):
         self.title = title
         self.duration = duration
 
@@ -34,4 +34,4 @@ class Podcast(MediaItem):
         self.episode = episode
 
     def info(self) -> str:
-        return f"podcast: {self.title} ep {episode} by {host} [{duration}}"
+        return f"podcast: {self.title} ep {self.episode} by {self.host} [{self.duration}]"
