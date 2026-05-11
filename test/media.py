@@ -35,3 +35,12 @@ class Podcast(MediaItem):
 
     def info(self) -> str:
         return f"podcast: {self.title} ep {self.episode} by {self.host} [{self.duration}]"
+
+    class Audiobook(MediaItem):
+        def __init__(self, title: str, duration: int, author: str, narrator: str):
+            super().__init__(title, duration)
+            self.author = author
+            self.narrator = narrator
+
+        def info(self) -> str:
+            return f"Audiobook: {self.title} by {self.author} {self.narrated} by {self.narrator} [{self.duration}]"
