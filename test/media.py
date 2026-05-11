@@ -43,4 +43,4 @@ class Podcast(MediaItem):
             self.narrator = narrator
 
         def info(self) -> str:
-            return f"Audiobook: {self.title} by {self.author} {self.narrated} by {self.narrator} [{self.duration}]"
+            return f"Audiobook: {self.title} by {self.author}, narrated by {self.narrator} [{self.duration}]"
